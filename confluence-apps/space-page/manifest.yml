@@ -1,0 +1,22 @@
+modules:
+  confluence:spacePage:
+    - key: space-page-hello-world-space-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: wisary-space-page
+      route: space-page
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/603a1a0d-5d9d-49e6-be01-4783b8e7c0e3
+permissions:
+  scopes:
+    - write:page:confluence
